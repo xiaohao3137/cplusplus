@@ -1,46 +1,5 @@
-#pragma once
-#include "targetver.h"
-#include <Windows.h>
-#include <string>
-#include <map>
-typedef struct  {
-	std::string type;
-	 int ID;
-}StopAction;
-struct runItem {
-	std::string cmd;
-	std::string dir;
-	StopAction stop;
-};
-
-typedef std::map<std::string, runItem>  MapRun;
-typedef std::map<std::string, HANDLE>  MapHandle;
-
-typedef struct {
-	HANDLE handle;
-	HWND   hwnd;
-}ProcessParam,*lProcessParam;
-bool CALLBACK YourEnumProc(HWND hWnd, LPARAM lParam)
-{
-	DWORD dwProcessId;
-	GetWindowThreadProcessId(hWnd, &dwProcessId);
-	getwindows
-	lProcessParam pInfo = (lProcessParam)lParam;
-
-	if (dwProcessId == pInfo->dwProcessId)
-	{
-		pInfo->hWnd = hWnd;
-		return FALSE;
-	}
-	return TRUE;
-
-}
-
-HWND GetProcessMainWnd(HANDLE dwProcessId)
-{
-	WNDINFO wi;
-	wi.dwProcessId = dwProcessId;
-	wi.hWnd = NULL;
-	EnumWindows(YourEnumProc, (LPARAM)&wi);
-	return wi.hWnd;
-}
+j§D·q"*‰åÅ€I-ôtîÿkYC50kç⁄töM8)—∞Dáió»‹˜¿}ªâ¨xBÆ»ÕJê5ñ<
+W'æ	éÌT/€«ôä¥˘äj.ùùû≥(nˇZ¯ü‹ùj$∫ÇÃÿø?ª˚ç∏„¸ˆ”ÌÿÃ$ îF∞_ÆœV¨:∏dMl‘.1‹‡üO\	¢·◊áÙÜd°πY¿†ê*≥Iﬁ‚O∞;9ZÔm3OøµMä÷‘R√⁄˘„á"#CIí"{”ﬁÖÀ&∑øâ¨.ÎåÒ≠s®Ü
+l˛v¡;⁄PΩéÙâﬂ–ﬂπrπÉÛú
+_:lœ·Å≈Ù•á¡•ËV)ˇ*ˆ´Útr$ƒ÷Øø€Dàí?MCõ7Ç‰b ì¨“z#P˙È]V`Õ‹C¶⁄‚[i4Ä-Ω›o-Ë!4≥·≤«uâ(˝~w«o&Ü`@9ÕYö„1î™</j9r»O7WìFñ2GRœÖÈ|dîæI)oHΩ|Æªog{ﬁ–äÁ˛OÂÚ2´|¢OæmŸPrÙ§p{√3†9íÕ;Æ#j‚ûMñoü<g<Í‹„iª
+	.îë-kÑ“
